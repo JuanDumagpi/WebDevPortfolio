@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0x;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+/* does a cool smooth scrolling effect when you click on the page buttons! */
+html{
+    scroll-behavior: smooth;
+}
+
+/* dark background with gold boxes for a bombastic, sci-fi, military style! */
+body {
+    background-color: #161719;
+    color: slategrey;
+    
+}
+
+.header {
+    position:fixed; /* makes sure that the header is ALWAYS there */
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 5em; /* I use em/rem so that the page is scalable/responsive */
+    background: gold;
+    display: flex;
+    justify-content: space-between; /* evenly spaces things */
+    align-items: center;
+    z-index: 100; /* makes sure the header is ALWAYS on top by making it move forward in the Z axis */
+}
+
+.navbar a{
+    position:relative;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #161719;
+    margin-left: 40px;
+}
+
+
+/* this is a nice transition effect that slowly underlines the navigation button when you hover on it */
+.navbar a::before {
+    content:'';
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #161719;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width:100%
+}
+
+#logo{
+    width: 2.5em;
+}
+
+.box{
+    margin: 1em auto 1em auto;
+    border: 2px solid gold;
+    background-color: gold;
+    width: 75%;
+}
+
+.center {
+    font-size: 1.2em;
+    padding: 1.5em;
+    text-align:center;
+    color: #161719;
+}
+
+h1 { color: gold;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 4.5em;
+    font-weight: bold;
+    letter-spacing: -1px; /* puts more spacing between letters to space out the h1 */
+    line-height: 1;
+    text-align: center; }
+
+h2 {
+    font-weight:900;
+    color: goldenrod;
+    padding: 8px;
+    text-align: center;
+}
+
+#list{
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+ul{
+    color: gold;
+    list-style-type: none; /* deletes the bullet points */
+    display: table;
+    margin: 0 auto;
+    padding: 0.5em;
+}

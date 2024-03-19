@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0x;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: #161719;
+    color: slategrey;
+}
+
+.header {
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1em 5em;
+    background: gold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.navbar a{
+    position:relative;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-decoration: none;
+    color: #161719;
+    margin-left: 40px;
+}
+
+.navbar a::before {
+    content:'';
+    position:absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #161719;
+    transition: .3s;
+}
+
+.navbar a:hover::before {
+    width:100%
+}
+
+#logo{
+    width: 2.5em;
+}
+
+.box{
+    margin: 1em auto 1em auto;
+    border: 2px solid gold;
+    background-color: gold;
+    width: 75%;
+}
+
+.center {
+    font-size: 1.2em;
+    padding: 1.5em;
+    text-align:center;
+    color: #161719;
+}
+
+h1 { color: gold;
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 4.5em;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 1;
+    text-align: center; }
+
+h2 {
+    font-weight:900;
+    color: goldenrod;
+    padding: 8px;
+    text-align: center;
+}
+
+#list{
+    margin: auto;
+    width: 75%;
+    text-align: center;
+}
+
+ul{
+    color: gold;
+    list-style-type: none;
+    display: table;
+    margin: 0 auto;
+    padding: 0.5em;
+}
