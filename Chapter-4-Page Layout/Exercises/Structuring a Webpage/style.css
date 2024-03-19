@@ -1,0 +1,134 @@
+/* sets the entire thing to no margins and padding  as well as sets the contents inside the border using border box*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* sets the display for images to block by default */
+img{
+    display: block;
+}
+
+/* this is the styling for the header */
+.header{
+    font-family: Tahoma, sans-serif;
+    font-weight: 700; /* makes the header text thick! */
+    background: #17072b;
+    color: white;
+    grid-area: hd; /* this is an identifier for the grid area which will be for later */
+    display: grid;
+    place-content: center center; /* sets the items in the grid centered vertically and horizontally */
+}
+
+.navbar{
+    padding: 1em;
+}
+
+.headdiv{
+    text-align: center;
+    padding: 2em;
+}
+
+h1{
+    font-size: 4rem;
+    display: inline-block;
+    border-bottom: 8px solid;
+}
+
+h2{
+    font-family: Tahoma, sans-serif;
+    font-weight: 700;
+    font-size: 3rem;
+    padding-top: 2rem;
+    display: inline-block;
+    border-bottom: 4px solid;
+}
+
+.button{
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 2.5rem;
+  font-weight: 400;
+  text-decoration: none; 
+  color: white;
+  padding-inline: .5em;
+}
+
+/* where most of the magic happens, I used grid templates to divide the page into columns and rows */
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    color: black;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* this means I divided into columns of 3 equal fractions */
+    grid-template-rows: .75fr 2fr 3em; /* the rows are divided into different sizes */
+    grid-template-areas: /* the template areas let me easily set how to divide the header, main, sub, and footer divs by giving them a name and area! */
+    "hd hd hd"
+    "mn mn sb"
+    "ft ft ft";
+    column-gap: 1.25rem; /* these set the column and row gaps */
+    row-gap: 1rem;
+}
+
+.box{
+    padding-inline: 1em;
+}
+
+p{
+    font-size: 1.75em;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+.main{
+    padding-inline: 1em;
+    grid-area: mn;
+    display: grid;
+}
+
+.main img{
+    height: auto;
+    width: 100%;
+    display: grid;
+    justify-content: end; /* makes it so the image is at the bottom of the box */
+}
+
+.sidebar{
+    color: white;
+    background: #172d67;
+    padding-inline: 3rem;
+    grid-area: sb;
+    display: grid;
+}
+
+.sidebar ul{
+    font-size: 1.75em;
+    padding-top: 1em;
+    padding-left: .5em;
+    list-style-type: "- "; /* turns the bullets into dashes instead */
+}
+
+.sidebar li{
+    padding: .5em 0 .5em 0;
+}
+
+.sideimage {
+    padding-top: 5em;
+    padding-bottom: 1em;
+    display: grid;
+    grid-template-columns: auto auto; /* sets a grid to divide the area in to two columns so that the images are side by side */
+    gap: 1em;
+}
+
+
+.footer{
+    font-size: 1.75em;
+    color:white;
+    background: #8c15e9;
+    grid-area: ft;
+    margin: 0;
+    display: grid;
+    place-content: center center;
+}
