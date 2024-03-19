@@ -1,0 +1,162 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    background:hsl(225, 50%, 25%);
+    color:rgb(0, 22, 51);
+}
+
+/* Custom font imported through HTML used for h1 and other text */
+/* I use rems/ems to make things scalable/responsive */
+
+h1{
+    font-family: "Press Start 2P", system-ui;
+    font-size: 3.5rem;
+    color: lightblue;
+    text-decoration: underline .1em;
+}
+
+p{
+    padding-top: .25em;
+}
+
+/* I use grid templates since it's the easiest way for me to arrange things together on the webpage */
+
+.main{
+    display: grid;
+    min-height: 100vh;
+    min-width: 100vw;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1em;
+    grid-auto-rows: 1fr 1fr 1fr;
+    gap: .5em
+}
+
+.box{
+    margin: auto;
+    padding: 2rem;
+    text-align: right;
+}
+
+/* these let me customize each .box class individually */
+
+.box:first-child{
+    display: block;
+    text-align: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin: auto auto 1.5em auto;
+}
+
+.box:nth-child(2){
+    background-color:royalblue;
+    }
+    
+.box:nth-child(3){
+background-color:cornflowerblue;
+}
+
+.box:nth-child(4){
+    background-color: cadetblue;
+    margin: auto 0 auto 0;
+}
+
+.box:nth-child(5){
+    grid-column-start: 1;
+    grid-column-end: 4;
+    margin:0 auto auto auto;
+    place-content: start end;
+}
+
+
+.digifont {
+    color: rgb(34, 34, 34);
+    font-family: "Press Start 2P", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 2em;
+  }  
+
+/* styles the form and makes it look more digital */
+
+.form {
+    width: 100%;
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: rgb(117, 165, 182);
+    padding: .75rem;
+    height: 4.5rem;
+    text-align: right;
+    resize: none;
+    margin: 0;
+}
+
+/* makes the form "light up" when it's in focus, again I'm going for a more 90's touch screen ATM look */
+.form:focus{
+    background-color: lightblue;
+}
+
+.formtotal{
+    border: 2px solid;
+    border-radius: 4px;
+    background-color: rgb(117, 165, 182);
+    padding: .75rem;
+    height: 4.5rem;
+    text-align: right;
+    resize: none;
+    margin: 0;
+    vertical-align: middle;
+}
+
+
+/* adds a drop shaddow and emboss effect to the forms and "total" div, giving it a 3D feel kinda like a calculator screen! */
+.shadow{
+    text-shadow: -2px 2px 2px 
+    rgb(34, 34, 34),  
+    1px -1px 0 
+    rgb(216, 241, 252); 
+    box-shadow:2px 2px 2px 
+    rgb(34, 34, 34),  
+    1px -1px 0 
+    rgb(216, 241, 252);
+
+}
+
+
+button{
+    font-family: "Press Start 2P", system-ui;
+    font-size: 2em;
+    text-decoration: underline .2em;
+    background-color:hsl(225, 50%, 60%);
+    border: none;
+    width: 100%;
+    color: rgb(34, 34, 34);
+    padding: .75rem 2rem 1rem;
+    text-align: center;
+    box-shadow:2px 2px 2px 
+    rgb(34, 34, 34),  
+    1px -1px 0 
+    rgb(216, 241, 252);
+    transition: 1s;
+}
+
+/* the transition here makes it so that when you hover on the button, it slowly lights up */
+
+button:hover{
+    background-color: white;
+    transition: 1s;
+}
+
+/* I added this to make the forms responsive, so as the window scales, so does the form and "total" div */
+
+@media only screen and (max-width: 600px) {
+    .form .formtotal {
+        grid-template-columns: auto;
+    }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Petrol Cost Calculator</title>
+
+    <!-- Imports the Press Start 2P font to give a "90's Digital ATM Touchscreen Feel" to the page -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap">
+    <!-- links to the stylesheet css file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <main class="main">
+
+        <div class="box">
+            <h1>Petrol Cost Calculator</h1>
+        </div>        
+
+        <div class="box">
+            <!-- input tag to let us type in the cost per liter -->
+            <!-- type=number says that the input is for numbers only and gives us the controls to increase/decrease it -->
+            <!-- inputmode=numeric forces certain browsers to use only numbers when typing in the form -->
+            <!-- placeholders here let us place a default amount to the forms -->
+        <input class="form digifont shadow" type="number" inputmode="numeric" placeholder="1.72" value="1.72" id="cost"> 
+        <p>Cost in $ per Liter</p>
+        </div>
+
+        <div class="box">
+        <input class="form digifont shadow" type="number" inputmode="numeric" placeholder="1" value="1" id="liters">
+        <p>Liters</p>
+        </div>
+            <!-- the id=total here is used to print out the cost by using the function in javascript later on -->
+        <div class="box">
+        <div class="formtotal digifont shadow"><span id="total"></span></div>
+        </span><p>Total Cost</p>
+        </div>
+            <!-- the button will execute the function mathttime() in javascript -->
+        <div  class="box">
+            <button onclick="mathtime()">Calculate</button>
+        </div>
+    
+        </main>
+
+
+</body>
+<!-- link to the javascript file -->
+<script src="script.js"></script>
+</html>
